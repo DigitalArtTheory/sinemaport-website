@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import addData from "@/app/firebase/firestore/addData";
+import Header from "./components/Header/Header";
 
 export default function Home() {
   const handleForm = async () => {
@@ -18,6 +19,7 @@ export default function Home() {
 
   return (
     <div>
+      <Header />
       <div>Hello World</div>
     </div>
   );
