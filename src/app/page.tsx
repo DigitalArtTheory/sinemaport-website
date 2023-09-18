@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import addData from "@/app/firebase/firestore/addData";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
     <div>
       <Header />
       <div>Hello World</div>
+      <Footer />
     </div>
   );
 }
