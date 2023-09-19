@@ -1,3 +1,9 @@
-footer {
-    background-image: url(/public/imgs/footerBg.png), lightgray 50% / cover no-repeat;
+.footer {
+    /* background-image: url(/public/imgs/footerBg.png); */
+    /* background-image: linear-gradient(to bottom, rgb(123, 8, 255, 0.9), rgb(123, 8, 255, 0.87)), url("/public/imgs/footerBg.png"); */
+    /* background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(255, 0, 0, 0.5); */
+    background: rgba(216, 33, 33, 0.6);
 }
