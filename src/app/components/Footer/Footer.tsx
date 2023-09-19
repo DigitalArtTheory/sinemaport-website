@@ -6,12 +6,17 @@ import twitter from "../../../../public/icons/twitter.svg";
 import whatsapp from "../../../../public/icons/whatsapp.svg";
 import youtube from "../../../../public/icons/youtube.svg";
 import Image from "next/image";
+import styles from "../Footer/Footer.module.css";
+import bgImage from "../../../../public/imgs/footerBg.png";
 
 const Footer = () => {
   return (
-    <footer className="pt-[3.87rem] pb-[17.5rem] bg-gradient-to-b from-red-600 to-red-600 mix-blend-screen">
-      <div className="mx-auto max-w-[34.56rem]">
-        <div className="flex gap-[36px] items-center">
+    <footer
+      className={`${styles.footer} w-full relative pt-[3.87rem] pb-[17.5rem] `}
+    >
+      <Image src={bgImage} className="-z-10 object-cover" alt="bgImage" fill />
+      <div className="mx-auto max-w-[20.25rem] md:max-w-[34.56rem]">
+        <div className="flex flex-wrap justify-center gap-[36px] items-center w-full md:flex-nowrap">
           <a>Hakkımızda</a>
           <a>Sık Sorulan Sorular</a>
           <a>Reklam Verin</a>
@@ -28,14 +33,14 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center">
-          <div className="flex items-center justify-center mt-[2.25rem] border-solid border-[1px] rounded-3xl px-[1.5rem] py-[1rem]">
+        <div className="flex items-center justify-center w-full md:justify-start">
+          <div className="flex items-center justify-center mt-[2.25rem] border-[#E9E9E9] border-solid border-[1px] rounded-full px-[1.5rem] py-[1rem]">
             <div className="mr-[2.5rem]">Bizi takip edin</div>
             <div className="flex gap-[0.5rem]">
               <a href="" className="w-[1.125rem]">
                 <Image src={facebook} width={100} height={100} alt="facebook" />
               </a>
-              <a href="">
+              <a href="" className="w-[1.125rem]">
                 <Image
                   src={instagram}
                   width={100}
@@ -43,13 +48,13 @@ const Footer = () => {
                   alt="instagram"
                 />
               </a>
-              <a href="">
+              <a href="" className="w-[1.125rem]">
                 <Image src={twitter} width={100} height={100} alt="x" />
               </a>
-              <a href="">
+              <a href="" className="w-[1.125rem]">
                 <Image src={whatsapp} width={100} height={100} alt="whatsapp" />
               </a>
-              <a href="">
+              <a href="" className="w-[1.125rem]">
                 <Image src={youtube} width={100} height={100} alt="youtube" />
               </a>
             </div>
