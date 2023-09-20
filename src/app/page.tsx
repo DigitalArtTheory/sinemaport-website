@@ -4,6 +4,7 @@ import addData from "@/app/firebase/firestore/addData";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import LoginForm from "./components/LoginForm/LoginForm";
+import Carousel from "./components/Carousel/Carousel";
 
 export default function Home() {
   const handleForm = async () => {
@@ -22,6 +23,7 @@ export default function Home() {
   return (
     <div>
       <Header />
+      <Carousel />
       <LoginForm />
       <div>Hello World</div>
       <Footer />
