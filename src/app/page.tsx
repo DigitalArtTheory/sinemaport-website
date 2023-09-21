@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import LoginForm from "./components/LoginForm/LoginForm";
 import Carousel from "./components/Carousel/Carousel";
+import RegisterForm from "./components/RegisterForm/RegisterForm";
 
 export default function Home() {
   const handleForm = async () => {
@@ -24,8 +25,10 @@ export default function Home() {
     <div>
       <Header />
       <Carousel />
+      <RegisterForm />
+      <br />
       <LoginForm />
-      <div>Hello World</div>
+      <br />
       <Footer />
     </div>
   );
