@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import LoginForm from "./components/LoginForm/LoginForm";
 import Carousel from "./components/Carousel/Carousel";
 import RegisterForm from "./components/RegisterForm/RegisterForm";
+import FilmCard from "./components/FilmCard/FilmCard";
 
 export default function Home() {
   const handleForm = async () => {
@@ -25,6 +26,14 @@ export default function Home() {
     <div>
       <Header />
       <Carousel />
+      <br />
+      <div className="flex mx-auto flex-wrap gap-[0.5rem] max-w-[20.5rem] sm:max-w-[71.25rem]">
+        <FilmCard />
+        <FilmCard />
+        <FilmCard />
+        <FilmCard />
+      </div>
+      <br />
       <RegisterForm />
       <br />
       <LoginForm />

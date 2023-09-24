@@ -1,0 +1,5 @@
+@media (max-width: 472px) {
+    .colGap {
+        gap:0.25rem;
+    }
+}
