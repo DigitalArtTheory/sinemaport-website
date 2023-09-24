@@ -21,27 +21,31 @@ const FilmCard = () => {
         </div>
       </div>
       <div className="flex flex-col gap-[0.5rem]">
-        <p>1. Oppenheimer</p>
-        <p>Hasılat</p>
+        <p className="text-[0.625rem] font-semibold">1. Oppenheimer</p>
+        <p className="text-[0.625rem] font-bold">Hasılat</p>
         <div className={`${styles.colGap} flex flex-wrap gap-[0.75rem]`}>
           <div>
-            <p>Hafta sonu</p>
-            <p>10.310.618</p>
+            <p className="text-[0.562rem] font-semibold">Hafta sonu</p>
+            <p className="text-[0.75rem] font-medium">10.310.618</p>
           </div>
           <div>
-            <p>Toplam</p>
-            <p className="text-[#30D849]">149.369.841</p>
+            <p className="text-[0.562rem] font-semibold">Toplam</p>
+            <p className="text-[#30D849] text-[0.75rem] font-medium">
+              149.369.841
+            </p>
           </div>
         </div>
-        <p>Seyirci</p>
+        <p className="text-[0.625rem] font-bold">Seyirci</p>
         <div className={`${styles.colGap} flex flex-wrap gap-[0.75rem]`}>
           <div>
-            <p>Hafta sonu</p>
-            <p>83.884</p>
+            <p className="text-[0.562rem] font-semibold">Hafta sonu</p>
+            <p className="text-[0.75rem] font-medium">83.884</p>
           </div>
           <div>
-            <p>Toplam</p>
-            <p className="text-[#30D849]">1.369.841</p>
+            <p className="text-[0.562rem] font-semibold">Toplam</p>
+            <p className="text-[#30D849] text-[0.75rem] font-medium">
+              1.369.841
+            </p>
           </div>
         </div>
       </div>
