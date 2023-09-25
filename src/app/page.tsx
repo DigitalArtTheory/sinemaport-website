@@ -8,6 +8,7 @@ import Carousel from "./components/Carousel/Carousel";
 import RegisterForm from "./components/RegisterForm/RegisterForm";
 import FilmCard from "./components/FilmCard/FilmCard";
 import NewsCard from "./components/News/NewsCard";
+import Rekorlar from "./components/Rekorlar/Rekorlar";
 
 export default function Home() {
   const handleForm = async () => {
@@ -72,6 +73,10 @@ export default function Home() {
           <NewsCard />
         </div>
       </div>
+      <br />
+      Seyirci Rekorları
+      <hr />
+      <Rekorlar />
       <br />
       <RegisterForm />
       <br />
