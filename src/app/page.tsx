@@ -9,6 +9,7 @@ import RegisterForm from "./components/RegisterForm/RegisterForm";
 import FilmCard from "./components/FilmCard/FilmCard";
 import NewsCard from "./components/News/NewsCard";
 import Rekorlar from "./components/Rekorlar/Rekorlar";
+import Roportaj from "./components/Roportajlar/Roportaj";
 
 export default function Home() {
   const handleForm = async () => {
@@ -40,7 +41,7 @@ export default function Home() {
       </div>
       Haberler
       <hr />
-      <div className="max-w-[20.4375rem] md:max-w-[71rem] mx-auto">
+      <div className="max-w-[20.5rem] md:max-w-[71rem] mx-auto">
         <div className="w-[20.375rem]">
           <Image
             src="/imgs/haberImg.png"
@@ -77,6 +78,10 @@ export default function Home() {
       Seyirci Rekorları
       <hr />
       <Rekorlar />
+      <br />
+      <div className="bg-[#292D32]">
+        <Roportaj />
+      </div>
       <br />
       <RegisterForm />
       <br />
