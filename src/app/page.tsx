@@ -8,6 +8,8 @@ import Carousel from "./components/Carousel/Carousel";
 import RegisterForm from "./components/RegisterForm/RegisterForm";
 import FilmCard from "./components/FilmCard/FilmCard";
 import NewsCard from "./components/News/NewsCard";
+import Compare from "./components/Compare/Compare";
+import Trailer from "./components/Trailer/Trailer";
 
 export default function Home() {
   const handleForm = async () => {
@@ -72,6 +74,30 @@ export default function Home() {
           <NewsCard />
         </div>
       </div>
+      <br />
+      Karşılaştır
+      <hr />
+      <br />
+      <div className="flex mx-auto flex-wrap gap-[0.5rem] max-w-[20.5rem] sm:max-w-[71.25rem] justify-center">
+        <div className="flex flex-col">
+          <div className="flex">
+            <img src="/icons/search-normal.png" className=" max-w-max" />
+            <p>Değiştir</p>
+          </div>
+          <br />
+          <Compare />
+        </div>
+        <div className="flex flex-col">
+          <div className="flex">
+            <img src="/icons/search-normal.png" className=" max-w-max" />
+            <p>Değiştir</p>
+          </div>
+          <br />
+          <Compare />
+        </div>
+      </div>
+      <br />
+      <Trailer />
       <br />
       <RegisterForm />
       <br />
