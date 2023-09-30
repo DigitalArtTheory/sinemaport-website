@@ -1,4 +1,6 @@
+"use client";
 import React, { useCallback , useState  } from "react";
+
 
 
 export const Nav = () => {
@@ -25,7 +27,6 @@ return (
       <img
         className="self-stretch relative max-w-full overflow-hidden h-[0rem] shrink-0 hidden"
         alt=""
-        src="/divider.svg"
       />
       <div className="self-stretch flex md:flex-row flex-col items-center justify-between mx-auto">
         <img className=" max-w-[15rem]"

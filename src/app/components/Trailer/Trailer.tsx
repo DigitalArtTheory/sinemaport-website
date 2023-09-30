@@ -45,8 +45,7 @@ const sliderVideoUrl = [
   },
 ];
 const Trailer = () => {
-  
-  const opts = {
+  var opts = {
     height: window.innerHeight,
     width: window.innerWidth,
     playerVars: {
@@ -62,8 +61,11 @@ const Trailer = () => {
 
   var isVideo = false;
 
-  var handleClick = () => {
+  const handleClick = () => {
     isVideo = true;
+    opts.height = window.innerHeight;
+    opts.width = window.innerWidth;
+    console.log(isVideo);
   };
   return (
     <div className="parent">
@@ -79,12 +81,9 @@ const Trailer = () => {
       >
         {sliderVideoUrl.map((imageUrl, index) => {
           return (
-            <div className="slider" key={index}>
+            <div className="slider" key={index} onClick={handleClick}>
               <div className="min-w-[23rem] flex flex-row items-start justify-start gap-[1.5rem]">
-                <div
-                  className="relative w-[13rem] h-[18rem]"
-                  onClick={handleClick}
-                >
+                <div className="relative w-[13rem] h-[18rem]">
                   <img src={imageUrl.url} alt="movie" />
                 </div>
               </div>
