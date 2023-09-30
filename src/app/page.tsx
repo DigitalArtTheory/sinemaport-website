@@ -91,7 +91,7 @@ export default function Home() {
       <div className="flex mx-auto flex-wrap gap-[0.5rem] max-w-[20.5rem] sm:max-w-[71.25rem] justify-center">
         <div className="flex flex-col">
           <div className="flex">
-            <img src="/icons/search-normal.png"/>
+            <img src="/icons/search-normal.png" />
             <p>Değiştir</p>
           </div>
           <br />
@@ -99,7 +99,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col">
           <div className="flex">
-            <img src="/icons/search-normal.png"/>
+            <img src="/icons/search-normal.png" />
             <p>Değiştir</p>
           </div>
           <br />

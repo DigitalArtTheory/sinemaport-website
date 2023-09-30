@@ -45,7 +45,7 @@ const sliderVideoUrl = [
   },
 ];
 const Trailer = () => {
-  var opts = {
+  let opts = {
     height: window.innerHeight,
     width: window.innerWidth,
     playerVars: {
@@ -59,7 +59,7 @@ const Trailer = () => {
     event.target.pauseVideo();
   }
 
-  var isVideo = false;
+  let isVideo = false;
 
   const handleClick = () => {
     isVideo = true;
@@ -67,6 +67,7 @@ const Trailer = () => {
     opts.width = window.innerWidth;
     console.log(isVideo);
   };
+
   return (
     <div className="parent">
       <Carousel
@@ -81,7 +82,12 @@ const Trailer = () => {
       >
         {sliderVideoUrl.map((imageUrl, index) => {
           return (
-            <div className="slider" key={index} onClick={handleClick}>
+            <div
+              className="slider"
+              key={index}
+              onClick={handleClick}
+              onClick={handleClick}
+            >
               <div className="min-w-[23rem] flex flex-row items-start justify-start gap-[1.5rem]">
                 <div className="relative w-[13rem] h-[18rem]">
                   <img src={imageUrl.url} alt="movie" />
