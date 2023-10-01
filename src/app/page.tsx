@@ -2,7 +2,6 @@
 import Image from "next/image";
 import addData from "@/app/firebase/firestore/addData";
 import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
 import LoginForm from "./components/LoginForm/LoginForm";
 import Carousel from "./components/Carousel/Carousel";
 import RegisterForm from "./components/RegisterForm/RegisterForm";
@@ -12,7 +11,7 @@ import Rekorlar from "./components/Rekorlar/Rekorlar";
 import Roportaj from "./components/Roportajlar/Roportaj";
 import Compare from "./components/Compare/Compare";
 import Trailer from "./components/Trailer/Trailer";
-import Search from "./elements/Search/Search";
+import HeaderSection from "./components/HeaderSection/HeaderSection";
 
 export default function Home() {
   const handleForm = async () => {
@@ -29,9 +28,8 @@ export default function Home() {
   };
 
   return (
-    <div className="px-[2.5rem]">
-      <Header />
-      <Search />
+    <div className="">
+      <HeaderSection />
       <Carousel />
       <br />
       Hasılat & Seyirci

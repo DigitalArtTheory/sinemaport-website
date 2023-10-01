@@ -1,13 +1,4 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  body{
-    background: #000;
-  }
-  
-  .slider {
+    .slider {
     margin:0 20px;
     overflow: hidden;
     padding:2rem 0;
