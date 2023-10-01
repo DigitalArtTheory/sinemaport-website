@@ -5,52 +5,47 @@ import "./Carousel.css";
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
+    breakpoint: { max: 3000, min: 1200 },
     items: 3,
-    slidesToSlide: 4 // optional, default to 1.
+    slidesToSlide: 4, // optional, default to 1.
   },
   tablet: {
-    breakpoint: { max: 1024, min: 675 },
+    breakpoint: { max: 1200, min: 800 },
     items: 2,
-    slidesToSlide: 3 // optional, default to 1.
+    slidesToSlide: 3, // optional, default to 1.
   },
   mobile: {
-    breakpoint: { max: 675, min: 464 },
+    breakpoint: { max: 800, min: 464 },
     items: 1,
-    slidesToSlide: 1 // optional, default to 1.
-  }
+    slidesToSlide: 1, // optional, default to 1.
+  },
 };
 const sliderImageUrl = [
   //First image url
   {
-    url:
-      "https://i2.wp.com/www.geeksaresexy.net/wp-content/uploads/2020/04/movie1.jpg?resize=600%2C892&ssl=1"
+    url: "https://i2.wp.com/www.geeksaresexy.net/wp-content/uploads/2020/04/movie1.jpg?resize=600%2C892&ssl=1",
   },
   {
-    url:
-      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-kids-movies-2020-call-of-the-wild-1579042974.jpg?crop=0.9760858955588091xw:1xh;center,top&resize=480:*"
+    url: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-kids-movies-2020-call-of-the-wild-1579042974.jpg?crop=0.9760858955588091xw:1xh;center,top&resize=480:*",
   },
   //Second image url
   {
-    url:
-      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-movies-for-kids-2020-sonic-the-hedgehog-1571173983.jpg?crop=0.9871668311944719xw:1xh;center,top&resize=480:*"
+    url: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-movies-for-kids-2020-sonic-the-hedgehog-1571173983.jpg?crop=0.9871668311944719xw:1xh;center,top&resize=480:*",
   },
   //Third image url
   {
-    url:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQS82ET2bq9oTNwPOL8gqyoLoLfeqJJJWJmKQ&usqp=CAU"
+    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQS82ET2bq9oTNwPOL8gqyoLoLfeqJJJWJmKQ&usqp=CAU",
   },
 
   //Fourth image url
 
   {
-    url:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTdvuww0JDC7nFRxiFL6yFiAxRJgM-1tvJTxA&usqp=CAU"
-  }
+    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTdvuww0JDC7nFRxiFL6yFiAxRJgM-1tvJTxA&usqp=CAU",
+  },
 ];
 const Slider = () => {
   return (
-    <div className="parent">
+    <div className="layout">
       <Carousel
         responsive={responsive}
         autoPlay={true}
@@ -63,10 +58,10 @@ const Slider = () => {
       >
         {sliderImageUrl.map((imageUrl, index) => {
           return (
-            <div className="slider" key={index}> 
-                <div className="min-w-[23rem] flex flex-row items-start justify-start gap-[1.5rem]">
+            <div className="slider" key={index}>
+              <div className="flex flex-row items-center justify-center gap-[1.5rem]">
                 <div className="relative w-[13rem] h-[18rem]">
-                    <img src={imageUrl.url} alt="movie" />
+                  <img src={imageUrl.url} alt="movie" />
                 </div>
                 <div className="w-[10rem] self-stretch flex flex-col items-start justify-between">
                   <div className="flex flex-col items-start justify-start gap-[1.5rem]">
@@ -88,7 +83,7 @@ const Slider = () => {
                     </div>
                   </div>
                 </div>
-                </div>
+              </div>
             </div>
           );
         })}

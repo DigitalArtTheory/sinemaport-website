@@ -12,6 +12,7 @@ import Rekorlar from "./components/Rekorlar/Rekorlar";
 import Roportaj from "./components/Roportajlar/Roportaj";
 import Compare from "./components/Compare/Compare";
 import Trailer from "./components/Trailer/Trailer";
+import Search from "./elements/Search/Search";
 
 export default function Home() {
   const handleForm = async () => {
@@ -28,8 +29,9 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <div className="px-[2.5rem]">
       <Header />
+      <Search />
       <Carousel />
       <br />
       Hasılat & Seyirci
