@@ -25,7 +25,7 @@ const RegisterForm = () => {
 
   return (
     <div
-      className={`${styles.form} relative px-[1.5rem] py-[2rem] max-w-[30.25rem] md:mt-[5.12rem]`}
+      className={`${styles.form} relative w-full mb-10 px-[1.5rem] py-[2rem] max-w-[30.25rem] md:mt-[5.12rem]`}
     >
       <div className="absolute top-0 left-0 blur-md -z-10 w-full h-full"></div>
       <form action="" className="">

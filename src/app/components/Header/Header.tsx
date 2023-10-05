@@ -22,15 +22,17 @@ const Header = () => {
   return (
     <header className="layout w-full relative">
       <div className="flex justify-between items-center pt-4 pb-[0.75rem] sm:pb-[1.62rem]">
-        <div className="max-w-[8rem] sm:max-w-[11rem]">
-          <Image
-            src="/imgs/sinemaport-red-LOGO3x.png"
-            alt="logo"
-            width={100}
-            height={100}
-            className=""
-          />
-        </div>
+        <Link href="/">
+          <div className="max-w-[8rem] sm:max-w-[11rem]">
+            <Image
+              src="/imgs/sinemaport-red-LOGO3x.png"
+              alt="logo"
+              width={100}
+              height={100}
+              className=""
+            />
+          </div>
+        </Link>
         <nav
           className={`hidden md:flex items-center gap-[1.63rem] ${
             !isOpen
@@ -42,7 +44,7 @@ const Header = () => {
             <Link href="/">
               <div>ANASAYFA</div>
             </Link>
-            <Link href="/movies">
+            <Link href="/filmler">
               <div>FİLMLER</div>
             </Link>
             <Link href="/seanslar">

@@ -4,7 +4,6 @@ import Header from "../components/Header/Header";
 export default function Seanslar() {
   return (
     <div>
-      <Header />
       <div className="flex flex-col items-start justify-start">
         <div className="mx-[2rem] mb-3">
           <h2>Seanslar</h2>

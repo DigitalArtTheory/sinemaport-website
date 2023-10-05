@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import styles from "../Rekorlar/Rekorlar.module.css";
 import recordimg from "../../../../public/imgs/RekorrImg.jpg";
+import MainHeader from "@/app/elements/MainHeader/MainHeader";
 
 const Rekorlar = () => {
   return (
@@ -13,7 +14,8 @@ const Rekorlar = () => {
         width={100}
         height={100}
       />
-      <div className="max-w-[20.4375rem] md:max-w-[71rem] mx-auto flex flex-col gap-[0.75rem]">
+      <div className="layout flex flex-col gap-[0.75rem]">
+        <MainHeader color="red" header="Seyirci Rekorları" />
         <div className="flex flex-col gap-[1rem]">
           <h2 className="text-white text-[0.875rem] font-semibold">Yerli</h2>
           <div className="flex flex-row gap-[0.5rem] gap w-full">

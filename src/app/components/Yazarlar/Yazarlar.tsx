@@ -1,13 +1,13 @@
-import Image from "next/image";
-import React from "react";
-import yazar from "../../../../public/imgs/yazar.png";
-import Link from "next/link";
 import MainHeader from "@/app/elements/MainHeader/MainHeader";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import yazar from "../../../../public/imgs/profilImg.png";
 
-const Roportaj = () => {
+const Yazarlar = () => {
   return (
     <div className="layout">
-      <MainHeader color="" header="RÖPORTAJLAR" />
+      <MainHeader color="" header="YAZARLAR" />
       <div className="flex flex-col md:flex-row gap-[1rem]">
         <div className="flex flex-col gap-[0.75rem]">
           <div className="w-[4.625rem] h-[4.625rem]">
@@ -110,4 +110,4 @@ const Roportaj = () => {
   );
 };
 
-export default Roportaj;
+export default Yazarlar;

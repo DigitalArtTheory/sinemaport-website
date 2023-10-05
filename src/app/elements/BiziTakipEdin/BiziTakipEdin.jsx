@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React, { useState } from "react";
 import facebook from "../../../../public/icons/facebook.svg";
 import instagram from "../../../../public/icons/instagram.svg";
 import twitter from "../../../../public/icons/twitter.svg";

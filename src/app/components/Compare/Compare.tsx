@@ -15,42 +15,63 @@ const Compare = () => {
             alt="filmName"
           />
         </div>
-      <div className="flex flex-col gap-[0.5rem]">
-        <p className="text-[0.625rem] font-semibold">1. Oppenheimer</p>
-        <p className="text-[0.625rem] font-bold">Hasılat</p>
-        <div className={`${styles.colGap} flex flex-wrap gap-[0.75rem]`}>
-          <div>
-            <p className="text-[0.562rem] font-semibold">Hafta sonu</p>
-            <p className="text-[0.75rem] font-medium">10.310.618</p>
+        <div className="flex flex-col gap-[0.5rem]">
+          <p className="text-[0.625rem] font-semibold">1. Oppenheimer</p>
+          <p className="text-[0.625rem] font-bold">Hasılat</p>
+          <div className={`${styles.colGap} flex flex-wrap gap-[0.75rem]`}>
+            <div>
+              <p className="text-[0.562rem] font-semibold">Hafta sonu</p>
+              <p className="text-[0.75rem] font-medium">10.310.618</p>
+            </div>
+            <div>
+              <p className="text-[0.562rem] font-semibold">Toplam</p>
+              <p className="text-[#30D849] text-[0.75rem] font-medium">
+                149.369.841
+              </p>
+            </div>
           </div>
-          <div>
-            <p className="text-[0.562rem] font-semibold">Toplam</p>
-            <p className="text-[#30D849] text-[0.75rem] font-medium">
-              149.369.841
-            </p>
+          <p className="text-[0.625rem] font-bold">Seyirci</p>
+          <div className={`${styles.colGap} flex flex-wrap gap-[0.75rem]`}>
+            <div>
+              <p className="text-[0.562rem] font-semibold">Hafta sonu</p>
+              <p className="text-[0.75rem] font-medium">83.884</p>
+            </div>
+            <div>
+              <p className="text-[0.562rem] font-semibold">Toplam</p>
+              <p className="text-[#30D849] text-[0.75rem] font-medium">
+                1.369.841
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col gap[0.25rem] items-left">
+            <p>IMDB</p>
+            <p>7.8</p>
           </div>
         </div>
-        <p className="text-[0.625rem] font-bold">Seyirci</p>
-        <div className={`${styles.colGap} flex flex-wrap gap-[0.75rem]`}>
-          <div>
-            <p className="text-[0.562rem] font-semibold">Hafta sonu</p>
-            <p className="text-[0.75rem] font-medium">83.884</p>
-          </div>
-          <div>
-            <p className="text-[0.562rem] font-semibold">Toplam</p>
-            <p className="text-[#30D849] text-[0.75rem] font-medium">
-              1.369.841
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col gap[0.25rem] items-left">
-          <p>IMDB</p>
-          <p>7.8</p>
-        </div>
-      </div>
       </div>
     </div>
   );
 };
 
-export default Compare;
+export default function CompareSection() {
+  return (
+    <div className="layout flex flex-wrap gap-[0.5rem] justify-center">
+      <div className="flex flex-col">
+        <div className="flex">
+          <img src="/icons/search-normal.png" />
+          <p>Değiştir</p>
+        </div>
+        <br />
+        <Compare />
+      </div>
+      <div className="flex flex-col">
+        <div className="flex">
+          <img src="/icons/search-normal.png" />
+          <p>Değiştir</p>
+        </div>
+        <br />
+        <Compare />
+      </div>
+    </div>
+  );
+}
