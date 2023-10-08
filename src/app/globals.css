@@ -41,6 +41,7 @@ ol {
 
 .react-multiple-carousel__arrow::before {
   color: #D82121 !important;
+  font-size: 40px !important;
 }
 
 .react-multiple-carousel__arrow--left,
@@ -60,12 +61,22 @@ ol {
   /* bottom: 0; */
 }
 
+.react-multiple-carousel__arrow--left::before {
+  content: "\2190" !important;
+}
+
+.react-multiple-carousel__arrow--right::before {
+  content: "\2192" !important;
+}
+
 .slider img {
   border-radius: 0 !important;
 }
 
 .react-multi-carousel-list {
-  padding: 2rem 0 !important;
+  /* padding: 2rem 0 !important; */
+  padding-top: 2rem !important;
+  padding-bottom: 3rem !important;
   clip-path: polygon(0% 0%, 1000% 0%, 100% 100%, 80% 100%, 0% 100%);
   overflow: visible !important;
 }
@@ -76,4 +87,10 @@ ol {
 
 .react-multi-carousel-item {
   /* padding-right: 1.5rem; */
+  /* width: 472px !important; */
+  /* margin-left: 55px !important; */
+}
+
+.react-multi-carousel-track {
+  /* margin-left: -91px !important; */
 }

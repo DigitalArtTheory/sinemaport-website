@@ -6,7 +6,7 @@ import haberCardImg from "../../../../public/imgs/newsCard.png";
 
 const NewsCard = () => {
   return (
-    <div className={`${styles.bgIm} relative w-full mt-[0.75rem]`}>
+    <div className={`${styles.bgIm} relative w-full`}>
       <Image
         src={haberCardImg}
         alt="haberImg"

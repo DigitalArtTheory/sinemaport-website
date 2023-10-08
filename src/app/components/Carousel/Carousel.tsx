@@ -7,19 +7,19 @@ import Link from "next/link";
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 3000, min: 1200 },
+    breakpoint: { max: 3000, min: 1024 },
     items: 2,
     slidesToSlide: 1, // optional, default to 1.
     partialVisibilityGutter: 40,
   },
   tablet: {
-    breakpoint: { max: 1200, min: 800 },
+    breakpoint: { max: 1024, min: 768 },
     items: 2,
     slidesToSlide: 1, // optional, default to 1.
     partialVisibilityGutter: 30,
   },
   mobile: {
-    breakpoint: { max: 800, min: 320 },
+    breakpoint: { max: 767, min: 320 },
     items: 1,
     slidesToSlide: 1, // optional, default to 1.
     partialVisibilityGutter: 10,
@@ -57,19 +57,21 @@ const sliderImageUrl = [
 
 const Slider = () => {
   return (
-    <div className="layout py-[0.75rem]">
-      <h1 className="flex gap-[1.5rem] text-[1rem] font-semibold">
-        Vizyondakiler <span className="text-[gray]">Gelecek Program</span>
+    <div className="layout py-[0.75rem] sm:px-[9.5rem] lg:px-[2rem] xl:px-0">
+      <h1 className="flex items-center gap-[1.5rem] text-[1rem] lg:text-[2rem] font-semibold">
+        Vizyondakiler{" "}
+        <span className="text-[gray] lg:text-[1.5rem]">Gelecek Program</span>
       </h1>
 
       <Carousel
         responsive={responsive}
         autoPlay={false}
-        swipeable={false}
+        swipeable={true}
         draggable={true}
         showDots={false}
         infinite={true}
         partialVisible={false}
+        // additionalTransfrom={-20}
         // dotListClass="custom-dot-list-style"
       >
         {sliderImageUrl.map((imageUrl, index) => {
@@ -89,10 +91,10 @@ const Slider = () => {
               </div>
               <div className="flex flex-col justify-between">
                 <div className="flex flex-col items-start gap-[1.5rem]">
-                  <h3 className="text-[1.5rem] font-semibold">
+                  <h3 className="text-[1.5rem] lg:text-[2rem] font-semibold">
                     {imageUrl.name}
                   </h3>
-                  <button className="font-semibold underline text-[0.9rem]">
+                  <button className="font-semibold underline text-[1rem]">
                     Fragmanı İzle
                   </button>
                 </div>

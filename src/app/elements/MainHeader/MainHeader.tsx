@@ -1,13 +1,16 @@
 import React from "react";
 import styles from "./MainHeader.module.css";
 
-const MainHeader: React.FC<{ header: string; color: "red" | "green" | "" }> = ({
-  header,
-  color,
-}) => {
+const MainHeader: React.FC<{
+  header: string;
+  color: "red" | "green" | null;
+}> = ({ header, color }) => {
   return (
-    <div className="mb-[1.25rem]">
-      <h2 className={`text-${color} font-bold text-[1rem] sm:text-[1.25rem]`}>
+    <div className="">
+      <h2
+        className={`text-${color} font-bold text-[1rem] sm:text-[1.25rem]`}
+        // style={{ color: `${color}` }}
+      >
         {header}
       </h2>
       <div
