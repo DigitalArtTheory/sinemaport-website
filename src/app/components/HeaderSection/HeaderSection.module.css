@@ -1,3 +1,7 @@
 .bg {
-    background:lightgray 50% / cover no-repeat;
+    /* background:lightgray 50%; */
+    background: rgba(0, 0, 0, 0.7);
+    /* background-color: lightgray 50%; */
+    /* background-position: 50% 50%; */
+    background-repeat: no-repeat;
 }

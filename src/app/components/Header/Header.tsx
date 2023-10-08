@@ -29,7 +29,7 @@ const Header = () => {
               alt="logo"
               width={100}
               height={100}
-              className=""
+              className="w-full h-full"
             />
           </div>
         </Link>
@@ -68,7 +68,7 @@ const Header = () => {
         </nav>
 
         <Overlay isOpen={isOpen} />
-        <div className="flex sm:hidden absolute right-0">
+        <div className="flex md:hidden absolute right-0">
           <button
             className=" flex top-0 right-0 z-20 relative w-10 h-10 text-white focus:outline-none"
             onClick={setNavbarOpen}

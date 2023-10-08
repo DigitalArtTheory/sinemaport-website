@@ -5,7 +5,7 @@ import MainHeader from "@/app/elements/MainHeader/MainHeader";
 
 const Haberler = () => {
   return (
-    <div className="layout mx-auto">
+    <div className="layout mx-auto pt-[0.75rem] pb-[0.56rem] sm:py-[2rem]">
       <MainHeader color="green" header="Haberler" />
       <div className="w-[20.375rem]">
         <Image

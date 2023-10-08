@@ -10,10 +10,12 @@ import twitterRed from "../../../../public/icons/xRed.svg";
 import whatsappRed from "../../../../public/icons/whatsappRed.svg";
 import youtubeRed from "../../../../public/icons/youtubeRed.svg";
 
-const BiziTakipEdin = ({ bColor, position }) => {
+const BiziTakipEdin = ({ bColor, position, isOnTop }) => {
   return (
     <div
-      className="flex items-center w-full layout"
+      className={`${
+        isOnTop ? "hidden md:flex" : "flex"
+      } items-center w-full layout checkMobile`}
       style={{ justifyContent: `${position}` }}
     >
       <div
@@ -77,5 +79,4 @@ const BiziTakipEdin = ({ bColor, position }) => {
     </div>
   );
 };
-
 export default BiziTakipEdin;

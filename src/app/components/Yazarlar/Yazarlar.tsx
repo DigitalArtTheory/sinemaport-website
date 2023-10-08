@@ -6,7 +6,7 @@ import yazar from "../../../../public/imgs/profilImg.png";
 
 const Yazarlar = () => {
   return (
-    <div className="layout">
+    <div className="layout py-[1.5rem] sm:py-[3rem]">
       <MainHeader color="" header="YAZARLAR" />
       <div className="flex flex-col md:flex-row gap-[1rem]">
         <div className="flex flex-col gap-[0.75rem]">

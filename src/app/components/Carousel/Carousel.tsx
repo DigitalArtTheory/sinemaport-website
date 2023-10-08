@@ -3,22 +3,26 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./Carousel.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1200 },
-    items: 3,
+    items: 2,
     slidesToSlide: 1, // optional, default to 1.
+    partialVisibilityGutter: 40,
   },
   tablet: {
     breakpoint: { max: 1200, min: 800 },
     items: 2,
     slidesToSlide: 1, // optional, default to 1.
+    partialVisibilityGutter: 30,
   },
   mobile: {
     breakpoint: { max: 800, min: 320 },
     items: 1,
     slidesToSlide: 1, // optional, default to 1.
+    partialVisibilityGutter: 10,
   },
 };
 
@@ -53,15 +57,15 @@ const sliderImageUrl = [
 
 const Slider = () => {
   return (
-    <div className="layout">
+    <div className="layout py-[0.75rem]">
       <h1 className="flex gap-[1.5rem] text-[1rem] font-semibold">
         Vizyondakiler <span className="text-[gray]">Gelecek Program</span>
       </h1>
 
       <Carousel
         responsive={responsive}
-        autoPlay={true}
-        swipeable={true}
+        autoPlay={false}
+        swipeable={false}
         draggable={true}
         showDots={false}
         infinite={true}
@@ -70,34 +74,33 @@ const Slider = () => {
       >
         {sliderImageUrl.map((imageUrl, index) => {
           return (
-            <div className="slider" key={index}>
-              <div className="flex flex-row items-center justify-center gap-[1.5rem]">
-                <div className="relative w-[11rem]">
-                  <Image
-                    src={imageUrl.url}
-                    alt="movie"
-                    width={100}
-                    height={100}
-                    className="w-full h-full"
-                  />
+            <div
+              className="flex flex-row gap-[0.5rem] md:gap-[1.5rem]"
+              key={index}
+            >
+              <div className="w-[10rem] h-[14.25rem] md:w-[13.125rem] md:h-[18.75rem]">
+                <Image
+                  src={imageUrl.url}
+                  alt="movie"
+                  width={100}
+                  height={100}
+                  className="w-full h-full "
+                />
+              </div>
+              <div className="flex flex-col justify-between">
+                <div className="flex flex-col items-start gap-[1.5rem]">
+                  <h3 className="text-[1.5rem] font-semibold">
+                    {imageUrl.name}
+                  </h3>
+                  <button className="font-semibold underline text-[0.9rem]">
+                    Fragmanı İzle
+                  </button>
                 </div>
-                <div className="self-stretch flex flex-col items-start justify-between">
-                  <div className="flex flex-col items-start justify-start gap-[1.5rem]">
-                    <div className="text-[1.5rem] font-semibold">
-                      <p>{imageUrl.name}</p>
-                    </div>
-                    <div className="flex font-semibold underline text-[0.9rem]">
-                      <div className="relative">Fragmanı İzle</div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-start justify-start text-[0.69rem] text-mcolor-red">
-                    <div className="flex flex-row items-start justify-start">
-                      <div className="text-red underline font-semibold">
-                        Detaylı İncele
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <Link href="/">
+                  <p className="text-[0.69rem] text-red underline font-semibold">
+                    Detaylı İncele
+                  </p>
+                </Link>
               </div>
             </div>
           );

@@ -6,7 +6,9 @@ import MainHeader from "@/app/elements/MainHeader/MainHeader";
 
 const Rekorlar = () => {
   return (
-    <div className={`${styles.bgColor} relative`}>
+    <div
+      className={`${styles.bgColor} relative pt-[1.5rem] pb-[2rem] sm:py-[2rem]`}
+    >
       <Image
         src={recordimg}
         className="absolute -z-10 inset-0 w-full h-full object-cover"

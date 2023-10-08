@@ -7,7 +7,7 @@
     background: #000;
   }
   
-  .slider {
+  /* .slider {
     margin:0 20px;
     overflow:"hidden";
     padding:2rem 0;
@@ -28,4 +28,4 @@
   }
   .react-multi-carousel-dot.react-multi-carousel-dot--active button{
   background: rgb(255, 68, 68) !important;
-  }
+  } */

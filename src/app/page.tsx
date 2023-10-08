@@ -29,7 +29,7 @@ export default function Home() {
   };
 
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <Carousel />
       <HasılatSeyirci />
       <Haberler />
