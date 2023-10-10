@@ -6,7 +6,7 @@ const MainHeader: React.FC<{
   color: "red" | "green" | null;
 }> = ({ header, color }) => {
   return (
-    <div className="">
+    <div className="flex flex-col gap-[0.44rem]">
       <h2
         className={`text-${color} font-bold text-[1rem] sm:text-[1.25rem]`}
         // style={{ color: `${color}` }}

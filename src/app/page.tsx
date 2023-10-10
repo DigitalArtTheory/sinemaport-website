@@ -8,11 +8,12 @@ import FilmCard from "./components/FilmCard/FilmCard";
 import NewsCard from "./components/News/NewsCard";
 import Rekorlar from "./components/Rekorlar/Rekorlar";
 import Roportaj from "./components/Roportajlar/Roportaj";
-import Trailer from "./components/Trailer/Trailer";
+import Fragmanlar from "./components/Fragmanlar/Fragmanlar";
 import MainHeader from "./elements/MainHeader/MainHeader";
 import HasılatSeyirci from "./components/HasılatSeyirci/HasılatSeyirci";
 import Haberler from "./components/Haberler/Haberler";
 import Yazarlar from "./components/Yazarlar/Yazarlar";
+import CompareSection from "./components/Compare/Compare";
 
 export default function Home() {
   const handleForm = async () => {
@@ -34,14 +35,14 @@ export default function Home() {
       <HasılatSeyirci />
       <Haberler />
       <Rekorlar />
+      <Fragmanlar />
+      <CompareSection />
       <div className="bg-[#292D32]">
         <Roportaj />
       </div>
       <div className="bg-[#606367]">
         <Yazarlar />
       </div>
-      <br />
-      <Trailer />
     </div>
   );
 }

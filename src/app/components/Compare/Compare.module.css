@@ -19,8 +19,14 @@
     font-weight: 700;
 }
 
+.titleFont {
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
 .hsNumberFont {
     font-size: 0.75rem;
     font-weight: 500;
+    color: #fff;
 }
 

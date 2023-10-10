@@ -1,3 +1,6 @@
 .bgColor {
-    background: linear-gradient(180deg, rgba(216, 33, 33, 0.2) 0%, rgba(216, 33, 33, 0.2) 100%);
+    /* background: linear-gradient(180deg, rgba(216,33,33, 0.2) 0%, rgba(59, 1, 1, 0.2) 100%); */
+    background: linear-gradient(180deg, rgba(59, 1, 1, 0.5) 0%, rgba(59, 1, 1, 0.5) 100%);
+    /* mix-blend-mode: multiply; */
+    /* background: lightgray; */
 }

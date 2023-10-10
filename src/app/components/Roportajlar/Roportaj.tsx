@@ -6,8 +6,8 @@ import MainHeader from "@/app/elements/MainHeader/MainHeader";
 
 const Roportaj = () => {
   return (
-    <div className="layout py-[1.5rem] sm:py-[3rem]">
-      <MainHeader color="" header="RÖPORTAJLAR" />
+    <div className="layout py-[1.5rem] sm:py-[3rem] sm:mt-[5rem]">
+      <MainHeader color={null} header="RÖPORTAJLAR" />
       <div className="flex flex-col md:flex-row gap-[1rem]">
         <div className="flex flex-col gap-[0.75rem]">
           <div className="w-[4.625rem] h-[4.625rem]">
