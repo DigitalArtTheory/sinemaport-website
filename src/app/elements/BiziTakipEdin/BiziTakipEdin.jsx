@@ -20,7 +20,7 @@ const BiziTakipEdin = ({ bColor, position, isOnTop }) => {
     >
       <div
         style={{ borderColor: `${bColor}` }}
-        className={`flex items-center justify-center mt-[2.25rem] border-solid border-[1px] rounded-full px-[1.5rem] py-[1rem]`}
+        className={`flex items-center justify-center mt-[1rem] md:mt-[2.25rem] border-solid border-[1px] rounded-full px-[1.5rem] py-[0.5rem] md:py-[1rem]`}
       >
         <div className="mr-[2.5rem] text-[0.625rem]">Bizi takip edin</div>
         {bColor === "red" ? (

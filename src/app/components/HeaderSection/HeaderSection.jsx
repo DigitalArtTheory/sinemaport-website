@@ -12,7 +12,7 @@ const HeaderSection = () => {
   const pathname = usePathname();
   return (
     <div
-      className={`${styles.bg} relative min-h-[27rem] px-[1.5rem] sm:px-[6rem] md:px-[9.5rem]`}
+      className={`${styles.bg} relative min-h-[20.4375rem] md:min-h-[27rem] px-[1.5rem] sm:px-[6rem] md:px-[9.5rem]`}
     >
       <Image
         src={bgImage}
@@ -28,7 +28,7 @@ const HeaderSection = () => {
         )}
         <Header />
       </div>
-      <Search />
+      {pathname !== "/register" && pathname !== "/login" && <Search />}
     </div>
   );
   return null;

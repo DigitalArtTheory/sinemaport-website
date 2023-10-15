@@ -57,57 +57,60 @@ const sliderImageUrl = [
 
 const Slider = () => {
   return (
-    <div className="layout py-[0.75rem] sm:px-[9.5rem] lg:px-[2rem] xl:px-0">
-      <h1 className="flex items-center gap-[1.5rem] text-[1rem] lg:text-[2rem] font-semibold">
-        Vizyondakiler{" "}
-        <span className="text-[gray] lg:text-[1.5rem]">Gelecek Program</span>
-      </h1>
+    <div className="bg-[#292D32] py-[0.75rem] sm:px-[9.5rem] lg:px-[2rem] xl:px-0">
+      <div className="layout ">
+        <h1 className="flex items-center gap-[1.5rem] text-[1rem] lg:text-[2rem] font-semibold">
+          Vizyondakiler{" "}
+          <span className="text-[gray] lg:text-[1.5rem]">Gelecek Program</span>
+        </h1>
 
-      <Carousel
-        responsive={responsive}
-        autoPlay={false}
-        swipeable={true}
-        draggable={true}
-        showDots={false}
-        infinite={true}
-        partialVisible={false}
-        // additionalTransfrom={-20}
-        // dotListClass="custom-dot-list-style"
-      >
-        {sliderImageUrl.map((imageUrl, index) => {
-          return (
-            <div
-              className="flex flex-row gap-[0.5rem] md:gap-[1.5rem]"
-              key={index}
-            >
-              <div className="w-[10rem] h-[14.25rem] md:w-[13.125rem] md:h-[18.75rem]">
-                <Image
-                  src={imageUrl.url}
-                  alt="movie"
-                  width={100}
-                  height={100}
-                  className="w-full h-full "
-                />
-              </div>
-              <div className="flex flex-col justify-between">
-                <div className="flex flex-col items-start gap-[1.5rem]">
-                  <h3 className="text-[1.5rem] lg:text-[2rem] font-semibold">
-                    {imageUrl.name}
-                  </h3>
-                  <button className="font-semibold underline text-[1rem]">
-                    Fragmanı İzle
-                  </button>
+        <Carousel
+          responsive={responsive}
+          autoPlay={false}
+          swipeable={true}
+          draggable={true}
+          showDots={false}
+          infinite={true}
+          partialVisible={false}
+          className="cc"
+          // additionalTransfrom={-20}
+          // dotListClass="custom-dot-list-style"
+        >
+          {sliderImageUrl.map((imageUrl, index) => {
+            return (
+              <div
+                className="flex flex-row gap-[0.5rem] md:gap-[1.5rem]"
+                key={index}
+              >
+                <div className="w-[10rem] h-[14.25rem] md:w-[13.125rem] md:h-[18.75rem]">
+                  <Image
+                    src={imageUrl.url}
+                    alt="movie"
+                    width={100}
+                    height={100}
+                    className="w-full h-full "
+                  />
                 </div>
-                <Link href="/">
-                  <p className="text-[0.69rem] text-red underline font-semibold">
-                    Detaylı İncele
-                  </p>
-                </Link>
+                <div className="flex flex-col justify-between">
+                  <div className="flex flex-col items-start gap-[1.5rem]">
+                    <h3 className="text-[1.5rem] lg:text-[2rem] font-semibold">
+                      {imageUrl.name}
+                    </h3>
+                    <button className="font-semibold underline text-[1rem]">
+                      Fragmanı İzle
+                    </button>
+                  </div>
+                  <Link href="/">
+                    <p className="text-[0.69rem] text-red underline font-semibold">
+                      Detaylı İncele
+                    </p>
+                  </Link>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </Carousel>
+            );
+          })}
+        </Carousel>
+      </div>
     </div>
   );
 };

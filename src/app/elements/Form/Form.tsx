@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../Form/Form.module.css";
+import Link from "next/link";
 
 const Form = () => {
   return (
@@ -27,7 +28,9 @@ const Form = () => {
             Parolamı Unuttum
           </a>
           <div className="flex justify-end gap-[0.5rem] mt-[2.03rem]">
-            <button className="py-[0.38rem] px-[1rem]">Üye Ol</button>
+            <Link href="/register" className="py-[0.38rem] px-[1rem]">
+              Üye Ol
+            </Link>
             <button className="py-[0.38rem] px-[1rem] bg-[#D82121] rounded-full">
               Giriş Yap
             </button>

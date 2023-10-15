@@ -50,7 +50,7 @@ const Trailer = () => {
   console.log(isPopupOpen);
 
   return (
-    <div className="px-[1.5rem] sm:px-[6rem] md:px-[9.5rem]">
+    <div className="px-[1.5rem] sm:px-[6rem] md:px-[9.5rem] mt-3 md:mt-[3.25rem]">
       <div className="layout ">
         <MainHeader color="red" header="FRAGMANLAR" />
         <Carousel

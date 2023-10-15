@@ -1,0 +1,10 @@
+.styledSelect select {
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+}
+
+.customCaro .react-multi-carousel-track  {
+    display: flex !important;
+    gap: 0.5rem !important;
+}

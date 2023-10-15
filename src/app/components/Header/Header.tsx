@@ -1,4 +1,5 @@
 "use client";
+//background: linear-gradient(180deg, #1A1B1C 22.06%, rgba(26, 27, 28, 0.00) 100%);
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";

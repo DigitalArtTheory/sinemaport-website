@@ -23,8 +23,10 @@ function Page() {
     return router.push("/admin");
   };
   return (
-    <div className="flex justify-center items-center">
-      <RegisterForm />
+    <div className="px-[1.5rem] sm:px-[6rem] md:px-[9.5rem]">
+      <div className="layout flex justify-end">
+        <RegisterForm />
+      </div>
     </div>
     // <div className="wrapper">
     //   <div className="form-wrapper">
