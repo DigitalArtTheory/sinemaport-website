@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const FavoriFilmler = () => {
@@ -27,63 +28,50 @@ const FavoriFilmler = () => {
 
   return (
     <div>
-      <h2>Favori Filmler</h2>
-      <h2>Film Puanlarım</h2>
-      <div>
-        <div className="lg:hidden grid grid-cols-2 gap-4 mt-6">
-          {movies.map((movie, idx) => (
-            <div className="" key={idx}>
-              <h3 className="text-[1.5rem] lg:text-[2rem] font-semibold">
-                {movie.title}
-              </h3>
-              <div className=" mt-2">
-                <Image
-                  src={movie.src}
-                  alt={movie.title}
-                  width={100}
-                  height={100}
-                  layout="responsive"
-                  className="w-full h-full"
-                />
-              </div>
-              <div className="flex flex-col items-start gap-1 mt-2">
-                <button className="font-semibold underline text-[1rem]">
-                  Fragmanı İzle
-                </button>
-                <Link href="/">
-                  <p className="text-[0.69rem] text-red underline font-semibold">
-                    Detaylı İncele
-                  </p>
-                </Link>
-              </div>
-            </div>
-          ))}
+      <div className="flex flex-col gap-6 md:flex-row md:gap-10">
+        <div className="flex">
+          <h2 className="text-[1.5rem] text-red font-semibold md:text-[2rem]">
+            Favori Filmler
+          </h2>
+          <span>Icon</span>
         </div>
-        <div className="hidden lg:grid lg:grid-cols-5 gap-x-4 gap-y-6 mt-6">
-          {movies.map((movie, idx) => (
-            <div className="flex flex-col gap-[0.5rem]" key={idx}>
-              <div className="max-w-[13.125rem]">
-                <Image
-                  src={movie.src}
-                  alt={movie.title}
-                  width={100}
-                  height={100}
-                  className="w-full h-full"
-                />
-              </div>
-              <div className="flex flex-col justify-between">
-                <h3 className="text-[1.5rem] lg:text-[2rem] font-semibold">
+        <div className="flex">
+          <h2 className="text-[1.5rem] font-semibold md:text-[2rem]">
+            Film Puanlarım
+          </h2>
+          <span>Icon</span>
+        </div>
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8 mt-[1.88rem] md:mt-[2.8rem]">
+        {movies.map((movie, idx) => (
+          <div className="flex flex-col gap-2" key={idx}>
+            <div className="">
+              <Image
+                src={movie.src}
+                alt={movie.title}
+                width={100}
+                height={100}
+                layout="responsive"
+                className="w-full h-full"
+              />
+            </div>
+            <div>
+              <div className="flex justify-between">
+                <h3 className="text-[0.875rem] md:text-[1rem] font-semibold">
                   {movie.title}
                 </h3>
-                <Link href="/">
-                  <p className="text-[0.69rem] text-red underline font-semibold mt-1">
-                    Detaylı İncele
-                  </p>
-                </Link>
+                <div>Icon</div>
+              </div>
+              <p className="text-[0.875rem] font-light md:text-[1rem] mt-1">
+                {movie.tür}
+              </p>
+              <div className="flex mt-2">
+                <p className="text-[0.75rem] md:text-[0.8125rem]">Paylaş</p>
+                <div>Icon</div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );
