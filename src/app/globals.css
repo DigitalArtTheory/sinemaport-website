@@ -97,3 +97,17 @@ ol {
 .react-multi-carousel-track {
   /* margin-left: -91px !important; */
 }
+
+/*Slug pages styles*/
+.text1 {
+  @apply text-[1rem];
+}
+
+.text2{
+  @apply text-[0.875rem] font-light;
+}
+
+.text3{
+  @apply text-[0.875rem] font-semibold;
+}
+
