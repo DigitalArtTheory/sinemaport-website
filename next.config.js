@@ -6,6 +6,7 @@ const nextConfig = {
       "encrypted-tbn0.gstatic.com",
       "hips.hearstapps.com",
       "i2.wp.com",
+      "img.youtube.com",
     ],
   },
 };

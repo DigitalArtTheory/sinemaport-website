@@ -16,6 +16,7 @@ import Yazarlar from "./components/Yazarlar/Yazarlar";
 import CompareSection from "./components/Compare/Compare";
 import Sponsor from "./components/Sponsor/Sponsor";
 import BeymenAd2 from "./elements/Beymen/BeymenAd2";
+import CaroVideos from "./elements/CaroVideos/CaroVideos";
 
 export default function Home() {
   const handleForm = async () => {

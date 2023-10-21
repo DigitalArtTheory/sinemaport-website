@@ -4,6 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import "./Fragmanlar.css";
 import YouTube from "react-youtube";
 import MainHeader from "@/app/elements/MainHeader/MainHeader";
+import CaroVideos from "@/app/elements/CaroVideos/CaroVideos";
 
 const responsive = {
   desktop: {
@@ -22,32 +23,65 @@ const responsive = {
     slidesToSlide: 1, // optional, default to 1.
   },
 };
-const sliderVideoUrl = [
-  //First image url
-  {
-    url: "https://www.youtube.com/embed/P99qJGrPNLs?si=A5GEPNGuJw21tsRu&amp;controls=0",
-  },
-  {
-    url: "https://www.youtube.com/embed/P99qJGrPNLs?si=A5GEPNGuJw21tsRu&amp;controls=0",
-  },
-  //Second image url
-  {
-    url: "https://www.youtube.com/embed/P99qJGrPNLs?si=A5GEPNGuJw21tsRu&amp;controls=0",
-  },
-  //Third image url
-  {
-    url: "https://www.youtube.com/embed/P99qJGrPNLs?si=A5GEPNGuJw21tsRu&amp;controls=0",
-  },
+// const sliderVideoUrl = [
+//   //First image url
+//   {
+//     url: "https://www.youtube.com/embed/P99qJGrPNLs?si=A5GEPNGuJw21tsRu&amp;controls=0",
+//   },
+//   {
+//     url: "https://www.youtube.com/embed/P99qJGrPNLs?si=A5GEPNGuJw21tsRu&amp;controls=0",
+//   },
+//   //Second image url
+//   {
+//     url: "https://www.youtube.com/embed/P99qJGrPNLs?si=A5GEPNGuJw21tsRu&amp;controls=0",
+//   },
+//   //Third image url
+//   {
+//     url: "https://www.youtube.com/embed/P99qJGrPNLs?si=A5GEPNGuJw21tsRu&amp;controls=0",
+//   },
 
-  //Fourth image url
+//   //Fourth image url
 
-  {
-    url: "https://www.youtube.com/embed/P99qJGrPNLs?si=A5GEPNGuJw21tsRu&amp;controls=0",
-  },
-];
+//   {
+//     url: "https://www.youtube.com/embed/P99qJGrPNLs?si=A5GEPNGuJw21tsRu&amp;controls=0",
+//   },
+// ];
 const Trailer = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   console.log(isPopupOpen);
+
+  const videos = [
+    {
+      name: "Spiderman",
+      url: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
+    },
+    {
+      name: "Aquaman",
+      url: "https://www.youtube.com/watch?v=FV3bqvOHRQo",
+    },
+    {
+      name: "Wonka",
+      url: "https://www.youtube.com/watch?v=otNh9bTjXWg",
+    },
+    {
+      name: "Kraven",
+      url: "https://www.youtube.com/watch?v=rze8QYwWGMs",
+    },
+    {
+      name: "Oppenheimer",
+      url: "https://www.youtube.com/watch?v=uYPbbksJxIg",
+    },
+    {
+      name: "Gladiator 2",
+      url: "https://www.youtube.com/watch?v=e0CJbdZtzI0",
+    },
+  ];
+
+  function extractVideoID(url) {
+    const regex = /(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([\w\-]+)/;
+    const match = url.match(regex);
+    return match ? match[1] : null;
+  }
 
   return (
     <div className="px-[1.5rem] sm:px-[6rem] md:px-[9.5rem] mt-3 md:mt-[3.25rem]">
@@ -62,7 +96,18 @@ const Trailer = () => {
           infinite={false}
           partialVisible={false}
         >
-          {sliderVideoUrl.map((videoUrl, index) => {
+          {videos.map((video, index) => {
+            const videoId = extractVideoID(video.url);
+            return (
+              <div className="flex flex-col gap-3 mr-2 sm:mr-4">
+                <CaroVideos videoId={videoId} />
+                <h4 className="text-red text-[0.75rem] font-semibold sm:text-[1rem]">
+                  {video.name}
+                </h4>
+              </div>
+            );
+          })}
+          {/* {sliderVideoUrl.map((videoUrl, index) => {
             return (
               <div
                 className="flex flex-row gap-[0.5rem] md:gap-[1.5rem]"
@@ -78,31 +123,9 @@ const Trailer = () => {
                     onClick={() => setIsPopupOpen(true)}
                   ></iframe>
                 </div>
-                {/* {isPopupOpen && (
-                  <div className="fixed inset-0 items-center justify-center z-50 w-[800px] h-[600px]">
-                    <div className="w-full">
-                      <div className="w-full">
-                        <span
-                          className="close-button"
-                          onClick={() => setIsPopupOpen(false)}
-                        >
-                          &times;
-                        </span>
-                        <iframe
-                          // width="800"
-                          // height="600"
-                          src={videoUrl.url}
-                          title="YouTube Video"
-                          allowFullScreen
-                          className="w-full h-full object-contain"
-                        ></iframe>
-                      </div>
-                    </div>
-                  </div>
-                )} */}
               </div>
             );
-          })}
+          })} */}
         </Carousel>
       </div>
     </div>
