@@ -37,7 +37,7 @@ const page = () => {
     <div>
       <div className="mt-3 md:mt-20 px-[1.5rem] sm:px-[6rem] md:px-[9.5rem]">
         <div className="layout">
-          <div className="flex flex-col gap-4 md:flex-row">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center">
             <h1 className="text-[1.5rem] font-semibold md:text-[2rem]">
               Genel Bakış
             </h1>
@@ -48,8 +48,8 @@ const page = () => {
           </div>
 
           {/* Mobile Info Card */}
-          <div className="flex flex-col gap-6">
-            <h1>Yanlış Anlama</h1>
+          <div className="md:hidden flex flex-col gap-6 mt-[1.4rem]">
+            <h1 className="text-[1.5rem] font-semibold">Yanlış Anlama</h1>
             <div className="w-full">
               <Image
                 alt="a"
@@ -146,8 +146,108 @@ const page = () => {
           </div>
 
           {/* Desktop Info Card */}
-          <div></div>
+          <div className="md:flex mt-10 gap-4">
+            <div className="max-w-[23rem] w-full">
+              <Image
+                alt=""
+                width={100}
+                height={100}
+                className="w-full h-full"
+                src="https://s3-alpha-sig.figma.com/img/5bc3/6407/c29aa8bacdf307a22bf3bb359996e53b?Expires=1698624000&Signature=mUQcqDvgwLzN3K2KP2FgG2QsB9gACe~0K1dSV~qmmy-mvBzDuYELRn2wMENf7YOblV5qD0SwGIFvHrqBdKQVPcv437odgt96DqmqaEaaOQeW3UZ~Jlt-AhLAKBPC18pxrfpJfClWzkWhULT7LQjnNGctshgLpDq2UORbY75BWVgXvO7~DXw-pMLaLneiuO4bi7XpCt5flJEpW1s1BsePSoJcBaPxP0IumE7NUla0GTXiSTbUlcLVZ7CaEZ-wRgOVwX8mDRFN1hRHQ-BRZgU3ZL5-gAy~n8Gr4JOR1vH3s~B8hRsNW~tlrU1gujeQRPoUog1i~Rrvlc0xm6opI7gLCw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              />
+            </div>
 
+            <div className="flex flex-col gap-[3.12rem]">
+              <div className="flex flex-col gap-4">
+                <h2 className="text-[2.5rem] font-semibold">Yanlış Anlama</h2>
+                <div className="flex gap-4">
+                  <div className="flex flex-col gap-4 max-w-[22.75rem]">
+                    <div className="flex flex-col gap-3">
+                      <p className="text2 text-[gray]">Filmin Türü</p>
+                      <p className="text3">Komedi</p>
+                    </div>
+                    <div className="flex flex-col gap-3">
+                      <p className="text2 text-[gray]">Yönetme</p>
+                      <p className="text3">Aykut Taşkan</p>
+                    </div>
+                    <div className="flex flex-col gap-3">
+                      <p className="text2 text-[gray]">Görüntü Yönetmen</p>
+                      <p className="text3">Cengizhan Durmaz</p>
+                    </div>
+                    <div className="flex flex-col gap-3">
+                      <p className="text2 text-[gray]">Senaryo</p>
+                      <p className="text3">Yazı İşleri</p>
+                    </div>
+                    <div className="flex flex-col gap-3">
+                      <p className="text2 text-[gray]">Oyuncular</p>
+                      <p className="text3">
+                        Cemal Hünal, Yılmaz Gruda, M.Fatih Özkan
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-3">
+                      <p className="text2 text-[gray]">Vizyon Tarihi</p>
+                      <p className="text3">11 Ağustos 2023</p>
+                    </div>
+                    <div className="flex flex-col gap-3">
+                      <p className="text2 text-[gray]">Dağıtım</p>
+                      <p className="text3">Dada Vision</p>
+                    </div>
+                    <div className="flex flex-col gap-3">
+                      <p className="text2 text-[gray]">Stüdyo</p>
+                      <p className="text3">Dada Yapım</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex justify-between">
+                <div className="flex flex-col gap-3">
+                  <h4 className="text-[0.75rem] font-bold">Seyirci</h4>
+                  <div className="flex gap-3">
+                    <div>
+                      <p className="text-[0.75rem] font-bold">Hafta Sonu</p>
+                      <p className="text-[0.875rem] font-medium">83.884</p>
+                    </div>
+                    <div>
+                      <p className="text-[0.75rem] font-bold">Toplam</p>
+                      <p className="text-[0.875rem] font-medium text-green">
+                        1.369.841
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-3">
+                  <h4 className="text-[0.75rem] font-bold">Hasılat</h4>
+                  <div className="flex gap-3">
+                    <div>
+                      <p className="text-[0.75rem] font-bold">Hafta Sonu</p>
+                      <p className="text-[0.875rem] font-medium">10.310.618</p>
+                    </div>
+                    <div>
+                      <p className="text-[0.75rem] font-bold">Toplam</p>
+                      <p className="text-[0.875rem] font-medium text-green">
+                        149.385.779
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p className="text-[1rem] text-end">
+                Favoriye Ekle <span>Icon</span>
+              </p>
+              <p className="text-[1rem] text-end mt-[1.62rem]">Puan Ver</p>
+              <p className="text-end"> * * * * * </p>
+              <p className="text-[1rem] text-end">3.0</p>
+            </div>
+          </div>
+
+          {/* Fin Desktop */}
           <div className="flex flex-col gap-[1.3rem]">
             <h2 className="mt-[1.5rem] text-[1.5rem] md:text-[2rem] font-semibold text-[#FAB64E]">
               Filmin Konusu & Detaylar

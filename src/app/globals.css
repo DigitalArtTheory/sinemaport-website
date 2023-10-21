@@ -104,10 +104,10 @@ ol {
 }
 
 .text2{
-  @apply text-[0.875rem] font-light;
+  @apply text-[0.875rem] font-light md:text-[1rem];
 }
 
 .text3{
-  @apply text-[0.875rem] font-semibold;
+  @apply text-[0.875rem] font-semibold md:text-[1.125rem];
 }
 
