@@ -5,6 +5,7 @@ import "./Fragmanlar.css";
 import YouTube from "react-youtube";
 import MainHeader from "@/app/elements/MainHeader/MainHeader";
 import CaroVideos from "@/app/elements/CaroVideos/CaroVideos";
+import ModalVideo from "react-modal-video";
 
 const responsive = {
   desktop: {
@@ -19,7 +20,7 @@ const responsive = {
   },
   mobile: {
     breakpoint: { max: 675, min: 464 },
-    items: 2,
+    items: 1,
     slidesToSlide: 1, // optional, default to 1.
   },
 };
@@ -47,8 +48,8 @@ const responsive = {
 //   },
 // ];
 const Trailer = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  console.log(isPopupOpen);
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [currentVideoId, setCurrentVideoId] = useState(null);
 
   const videos = [
     {
@@ -83,6 +84,11 @@ const Trailer = () => {
     return match ? match[1] : null;
   }
 
+  function handlePlay(videoId) {
+    setCurrentVideoId(videoId);
+    setPopupOpen(true);
+  }
+
   return (
     <div className="px-[1.5rem] sm:px-[6rem] md:px-[9.5rem] mt-3 md:mt-[3.25rem]">
       <div className="layout ">
@@ -100,34 +106,28 @@ const Trailer = () => {
             const videoId = extractVideoID(video.url);
             return (
               <div className="flex flex-col gap-3 mr-2 sm:mr-4">
-                <CaroVideos videoId={videoId} />
+                <CaroVideos
+                  videoId={videoId}
+                  onPlay={() => handlePlay(videoId)}
+                />
+
                 <h4 className="text-red text-[0.75rem] font-semibold sm:text-[1rem]">
                   {video.name}
                 </h4>
               </div>
             );
           })}
-          {/* {sliderVideoUrl.map((videoUrl, index) => {
-            return (
-              <div
-                className="flex flex-row gap-[0.5rem] md:gap-[1.5rem]"
-                key={index}
-              >
-                <div className="w-[10rem] h-[6.1875rem] md:w-[23rem] md:h-[14.5rem]">
-                  <iframe
-                    src={videoUrl.url}
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    className="w-full h-full object-cover"
-                    onClick={() => setIsPopupOpen(true)}
-                  ></iframe>
-                </div>
-              </div>
-            );
-          })} */}
         </Carousel>
       </div>
+      <React.Fragment>
+        <ModalVideo
+          channel="youtube"
+          youtube={{ controls: 0, autoplay: 1, mute: 1 }}
+          isOpen={popupOpen}
+          videoId={currentVideoId}
+          onClose={() => setPopupOpen(false)}
+        />
+      </React.Fragment>
     </div>
   );
 };
