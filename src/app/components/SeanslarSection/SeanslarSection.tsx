@@ -20,7 +20,7 @@ const responsive = {
   },
   mobile: {
     breakpoint: { max: 767, min: 320 },
-    items: 2,
+    items: 1,
     slidesToSlide: 1, // optional, default to 1.
     // partialVisibilityGutter: 10,
   },
@@ -334,13 +334,13 @@ const SeanslarSection = () => {
                           id="Vector"
                           d="M8.00005 8.39414C9.077 8.39414 9.95005 7.5211 9.95005 6.44414C9.95005 5.36719 9.077 4.49414 8.00005 4.49414C6.92309 4.49414 6.05005 5.36719 6.05005 6.44414C6.05005 7.5211 6.92309 8.39414 8.00005 8.39414Z"
                           stroke="#D82121"
-                          stroke-width="1.5"
+                          strokeWidth="1.5"
                         />
                         <path
                           id="Vector_2"
                           d="M2.76256 5.30625C3.99381 -0.106249 12.0126 -0.0999984 13.2376 5.3125C13.9563 8.4875 11.9813 11.175 10.2501 12.8375C8.99381 14.05 7.00631 14.05 5.74381 12.8375C4.01881 11.175 2.04381 8.48125 2.76256 5.30625Z"
                           stroke="#D82121"
-                          stroke-width="1.5"
+                          strokeWidth="1.5"
                         />
                       </g>
                     </g>
@@ -361,12 +361,13 @@ const SeanslarSection = () => {
               {salon.films.map((film) => (
                 <div className="flex flex-col gap-[0.5rem]">
                   <div className="flex flex-col">
-                    <div>
+                    <div className="max-w-[11.0625rem] min-w-[10rem] w-full">
                       <Image
                         alt="movieImg"
                         width={100}
                         height={100}
                         src={film.movieImage}
+                        className="w-full h-full"
                       />
                     </div>
                     <div className="text-[0.875rem] font-semibold md:text-[1rem]">

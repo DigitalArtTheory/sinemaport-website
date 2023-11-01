@@ -26,13 +26,13 @@ const page = () => {
   ];
 
   return (
-    <div className="px-[1.5rem] sm:px-[6rem] md:px-[9.5rem]">
+    <div className="mt-3 md:mt-20 px-[1.5rem] sm:px-[6rem] md:px-[9.5rem]">
       <div className="layout">
-        <div>
-          <h1>Röportajlar</h1>
-          <Sırala />
-          {roportajlar.map((rop) => (
-            <div className="">
+        <h1>Röportajlar</h1>
+        <Sırala />
+        {roportajlar.map((rop) => (
+          <div className="mt-6 md:mt-10 flex flex-col md:flex-row">
+            <div className=" flex flex-col gap-[1.5rem]">
               <div className="w-[4.625rem] h-[4.625rem]">
                 <Image
                   src={yazar}
@@ -49,14 +49,13 @@ const page = () => {
                 <h4 className="text-white text-[0.75rem] sm:text-[0.875rem] font-bold mt-[0.75rem] lg:mt-[1rem]">
                   {rop.baslık}
                 </h4>
-                <p className="text-white text-[0.625rem] sm:text-[0.8125rem] font-light mt-[0.75rem] lg:mt-[1.5rem]">
+                <p className="text-white text-[0.625rem] sm:text-[0.8125rem] font-light mt-[1rem] lg:mt-[1.5rem]">
                   {rop.excerpt}
                 </p>
               </div>
-              <hr />
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );

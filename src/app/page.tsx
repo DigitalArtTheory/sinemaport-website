@@ -1,22 +1,16 @@
 "use client";
 import Image from "next/image";
 import addData from "@/app/firebase/firestore/addData";
-import LoginForm from "./components/LoginForm/LoginForm";
-import Carousel from "./components/Carousel/Carousel";
-import RegisterForm from "./components/RegisterForm/RegisterForm";
-import FilmCard from "./components/FilmCard/FilmCard";
-import NewsCard from "./components/News/NewsCard";
-import Rekorlar from "./components/Rekorlar/Rekorlar";
-import Roportaj from "./components/Roportajlar/Roportaj";
-import Fragmanlar from "./components/Fragmanlar/Fragmanlar";
-import MainHeader from "./elements/MainHeader/MainHeader";
 import HasılatSeyirci from "./components/HasılatSeyirci/HasılatSeyirci";
-import Haberler from "./components/Haberler/Haberler";
-import Yazarlar from "./components/Yazarlar/Yazarlar";
-import CompareSection from "./components/Compare/Compare";
-import Sponsor from "./components/Sponsor/Sponsor";
 import BeymenAd2 from "./elements/Beymen/BeymenAd2";
-import CaroVideos from "./elements/CaroVideos/CaroVideos";
+import Haberler from "./components/Haberler/Haberler";
+import Rekorlar from "./components/Rekorlar/Rekorlar";
+import FFragmanlar from "./components/FFragmanlar/FFragmanlar";
+import CompareSection from "./components/Compare/Compare";
+import Roportaj from "./components/Roportajlar/Roportaj";
+import Yazarlar from "./components/Yazarlar/Yazarlar";
+import Sponsor from "./components/Sponsor/Sponsor";
+import Slider from "./components/Carousel/Carousel";
 
 export default function Home() {
   const handleForm = async () => {
@@ -34,9 +28,9 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden relative">
-      <Carousel />
+      <Slider />
       <svg
-        className="absolute left-[0rem] top-[14rem] max-w-[8vw] w-full"
+        className="absolute left-[0rem] top-[15rem] max-w-[8vw] w-full"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 142 303"
         fill="none"
@@ -64,7 +58,7 @@ export default function Home() {
       </svg>
       <Haberler />
       <svg
-        className="hidden lg:block lg:absolute left-[0rem] top-[83rem]"
+        className="hidden lg:block lg:absolute left-[0rem] top-[87rem]"
         xmlns="http://www.w3.org/2000/svg"
         width="118"
         height="274"
@@ -77,7 +71,7 @@ export default function Home() {
         />
       </svg>
       <Rekorlar />
-      <Fragmanlar />
+      <FFragmanlar />
       <CompareSection />
       <Roportaj />
       <BeymenAd2 />

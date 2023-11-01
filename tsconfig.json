@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/elements/BiziTakipEdin/BiziTakipEdin.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/elements/BiziTakipEdin/BiziTakipEdin.jsx", "src/app/signin/layout.js", "src/app/register/layout.js", "src/app/(deneme)/layout.js"],
   "exclude": ["node_modules"]
 }

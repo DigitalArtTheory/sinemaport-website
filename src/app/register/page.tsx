@@ -2,7 +2,7 @@
 import React from "react";
 import register from "@/app/firebase/auth/register";
 import { useRouter } from "next/navigation";
-import RegisterForm from "../components/RegisterForm/RegisterForm";
+import RegisterForm from "@/app/components/RegisterForm/RegisterForm";
 
 function Page() {
   const [email, setEmail] = React.useState("");

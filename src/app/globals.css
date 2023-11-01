@@ -39,6 +39,15 @@ ol {
   list-style-position: inside;
 }
 
+/* .formsFullBg {
+  height: 100%;
+  background: url('https://s3-alpha-sig.figma.com/img/3f52/4615/fc9d530766c50f29ce94667a28b287a3?Expires=1698624000&Signature=mM8c9upSoCrGS9oeFPwOhbG2lXxibDlwtOpo693zGmKuSOlhaKp~sZjn3Reqoxpwv4ftcZlXPNtxtLIKL4M0UczITz3MoJ6qPcyfSKLai-y81EY0cSNqWJRP6Gpnd9x5LRhKku6wDordL2BE2~srq9pzgnZXT0G7r6EtejiUputoyZky7MexZE1QX~oa2oCJnMRRIuGPdYOJVrAwU9Sy3vUdFlXEUarwyy2p1KyHY~Ztc31Eycifz~b2plipjIUUqXHoBZVzVAyhnWt3-5rSasbvviZOlD721rVt7Rko5GqAdjbFp0vDCewNT6rk-TTz828jYyjn8SEK941N~1~O3g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
 /*React Carousel*/
 .react-multiple-carousel__arrow {
   z-index: 1 !important;
